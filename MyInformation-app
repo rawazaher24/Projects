@@ -1,0 +1,86 @@
+//using containrs in it
+import 'package:flutter/material.dart';
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.cyan[700],
+        appBar: AppBar(title: Text("My Information",
+        ),
+      ),
+        body: Center(
+          child: SafeArea(
+            
+            child: Column(
+              children: [
+          CircleAvatar(
+            radius: 50.0,
+            backgroundImage: NetworkImage("https://w7.pngwing.com/pngs/4/736/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png"),
+            ),
+                Text("UserName",
+                  style: TextStyle(
+                    fontFamily: "Ranga",
+                    fontSize: 50,
+                    color: Colors.black87,
+                  ),
+                ),
+                Text("Description about the user ",
+                  style: TextStyle(
+                    fontFamily: "Kanit",
+                    fontSize: 25,
+                    color: Colors.lightBlueAccent,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.all(20),
+                  //padding: EdgeInsets.all(20),
+                  color: Colors.black12,
+                  child: Row(
+                    children: [
+                      Icon(Icons.phone
+                      ),
+                      SizedBox(
+                        width: 15.0,
+
+                      ),
+                      Text("UserNumber",
+                      style: TextStyle(
+                        fontFamily: "Kanit",
+                        fontSize:20 ,
+                      ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  color: Colors.black12,
+                  margin: EdgeInsets.all(20),
+                  //padding: EdgeInsets.all(20),
+                  child: Row(
+                    children: [
+                      Icon(Icons.alternate_email),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Text("UserEmail@gmail.com",
+                      style: TextStyle(
+                        fontFamily: "Kanit",
+                        fontSize: 20,
+                      ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+}
